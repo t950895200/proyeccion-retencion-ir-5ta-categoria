@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyección IR 5ta Categoría 2026 — Guía Interactiva de Nómina</title>
+  <style>
+    :root {
+      --bg-primary: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-subtle: #f1f5f9;
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --brand-primary: #1e3a8a;
+      --brand-secondary: #0284c7;
+      --brand-accent: #0f766e;
+      --border-color: #e2e8f0;
+      --badge-gravado-bg: #fef3c7;
+      --badge-gravado-text: #92400e;
+      --badge-gravado-border: #fde68a;
+      --badge-inafecto-bg: #dcfce7;
+      --badge-inafecto-text: #166534;
+      --badge-inafecto-border: #bbf7d0;
+      --badge-alert-bg: #fee2e2;
+      --badge-alert-text: #991b1b;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+      --radius-md: 10px;
+      --radius-lg: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding-bottom: 4rem;
+    }
+
+    a {
+      color: var(--brand-secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #0f766e 100%);
+      color: #ffffff;
+      padding: 2.75rem 1.5rem 2.25rem;
+      border-bottom: 4px solid #38bdf8;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .hero-top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .source-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #f8fafc;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      backdrop-filter: blur(4px);
+      transition: background 0.2s;
+    }
+
+    .pill:hover {
+      background: rgba(255, 255, 255, 0.25);
+      text-decoration: none;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      line-height: 1.25;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      max-width: 850px;
+      margin-bottom: 1.5rem;
+    }
+
+    /* KPI Banner */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .kpi-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+    }
+
+    .kpi-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #93c5fd;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .kpi-value {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .kpi-sub {
+      font-size: 0.82rem;
+      color: #e2e8f0;
+      margin-top: 0.2rem;
+    }
+
+    /* Navigation Tabs */
+    .nav-bar {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-inner {
+      display: flex;
+      gap: 0.25rem;
+      overflow-x: auto;
+      padding: 0.6rem 1.5rem;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      padding: 0.6rem 1.1rem;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.18s;
+    }
+
+    .tab-btn:hover {
+      background: var(--bg-subtle);
+      color: var(--brand-primary);
+    }
+
+    .tab-btn.active {
+      background: var(--brand-primary);
+      color: #ffffff;
+    }
+
+    /* Main Content Layout */
+    main {
+      padding: 2rem 1.5rem 0;
+    }
+
+    .section {
+      display: none;
+      animation: fadeIn 0.22s ease-in-out;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      font-weight: 800;
+      margin-bottom: 0.35rem;
+    }
+
+    .section-header p {
+      color: var(--text-secondary);
+      font-size: 0.96rem;
+    }
+
+    /* Cards & Grids */
+    .card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1.5rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.5rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 860px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Form Controls in Simulator */
+    .form-group {
+      margin-bottom: 1.15rem;
+    }
+
+    .form-label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+      color: var(--text-primary);
+    }
+
+    .form-help {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.45rem;
+    }
+
+    select, input[type="number"] {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 0.96rem;
+      color: var(--text-primary);
+      background: #ffffff;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin-top: 0.4rem;
+      accent-color: var(--brand-primary);
+    }
+
+    .preset-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+
+    .preset-btn {
+      background: var(--bg-subtle);
+      border: 1px solid #cbd5e1;
+      color: var(--text-secondary);
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .preset-btn:hover {
+      background: #e2e8f0;
+      color: var(--brand-primary);
+      border-color: #94a3b8;
+    }
+
+    /* Simulator Result Box */
+    .result-panel {
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+      border: 2px solid #cbd5e1;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+    }
+
+    .status-banner {
+      padding: 1rem 1.2rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 1.25rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .status-inafecto {
+      background: var(--badge-inafecto-bg);
+      color: var(--badge-inafecto-text);
+      border: 1px solid var(--badge-inafecto-border);
+    }
+
+    .status-afecto {
+      background: var(--badge-gravado-bg);
+      color: var(--badge-gravado-text);
+      border: 1px solid var(--badge-gravado-border);
+    }
+
+    .breakdown-list {
+      list-style: none;
+      margin: 1rem 0;
+    }
+
+    .breakdown-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 0;
+      border-bottom: 1px dashed #cbd5e1;
+      font-size: 0.92rem;
+    }
+
+    .breakdown-item.total {
+      border-top: 2px solid var(--text-primary);
+      border-bottom: none;
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding-top: 0.85rem;
+      margin-top: 0.25rem;
+    }
+
+    .breakdown-item.excluded {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .badge-si {
+      background: var(--badge-gravado-bg);
+      color: var(--badge-gravado-text);
+      border: 1px solid var(--badge-gravado-border);
+    }
+
+    .badge-no {
+      background: var(--badge-inafecto-bg);
+      color: var(--badge-inafecto-text);
+      border: 1px solid var(--badge-inafecto-border);
+    }
+
+    /* Tables */
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    th {
+      background: #1e293b;
+      color: #ffffff;
+      text-align: left;
+      padding: 0.85rem 1rem;
+      font-weight: 700;
+    }
+
+    td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: top;
+    }
+
+    tr:hover td {
+      background-color: #f8fafc;
+    }
+
+    .num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      font-weight: 700;
+    }
+
+    /* Filter Bar */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .filter-btn {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      padding: 0.45rem 0.95rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .filter-btn.active {
+      background: var(--brand-secondary);
+      color: #ffffff;
+      border-color: var(--brand-secondary);
+    }
+
+    /* Callouts */
+    .callout {
+      border-left: 4px solid var(--brand-secondary);
+      background: #f0f9ff;
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 1rem 0;
+      font-size: 0.92rem;
+      color: #0c4a6e;
+    }
+
+    .callout-warn {
+      border-left-color: #d97706;
+      background: #fffbeb;
+      color: #78350f;
+    }
+
+    /* Bar visual in table */
+    .bar-track {
+      width: 100%;
+      background: #e2e8f0;
+      height: 10px;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 0.35rem;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #1e3a8a, #0284c7);
+      border-radius: 999px;
+    }
+
+    /* Quiz styles */
+    .quiz-item {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin-bottom: 1.15rem;
+      background: var(--bg-surface);
+    }
+
+    .quiz-q {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .quiz-options {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .quiz-opt {
+      text-align: left;
+      padding: 0.7rem 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: #ffffff;
+      cursor: pointer;
+      font-size: 0.92rem;
+      transition: all 0.15s;
+    }
+
+    .quiz-opt:hover {
+      background: var(--bg-subtle);
+      border-color: #94a3b8;
+    }
+
+    .quiz-opt.correct {
+      background: var(--badge-inafecto-bg);
+      border-color: #22c55e;
+      color: var(--badge-inafecto-text);
+      font-weight: 700;
+    }
+
+    .quiz-opt.wrong {
+      background: var(--badge-alert-bg);
+      border-color: #ef4444;
+      color: var(--badge-alert-text);
+    }
+
+    .quiz-feedback {
+      display: none;
+      margin-top: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      background: var(--bg-subtle);
+      color: var(--text-secondary);
+    }
+
+    footer {
+      max-width: 1140px;
+      margin: 2.5rem auto 0;
+      padding: 1.5rem;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-top">
+        <div class="source-pills">
+          <a class="pill" href="https://gemini.google.com/notebook/6e42d4e9-0671-44ca-ba32-0f7327183aee" target="_blank" rel="noopener">
+            ⚖️ Cuaderno: Elaboración de Planillas
+          </a>
+          <a class="pill" href="https://docs.google.com/document/d/1gObivCOqF3ca_6JG-4afhkpqrPQnHksYTa_vmf9WcxA" target="_blank" rel="noopener">
+            📄 Fuente: Proyección IR 5ta Categoría 2026 (Google Docs)
+          </a>
+        </div>
+        <span class="pill">Ejercicio Gravable 2026 · Perú</span>
+      </div>
+
+      <h1>Proyección para la Retención del Impuesto a la Renta de 5ta Categoría en 2026</h1>
+      <p>
+        Guía técnica e interactiva para el área de nómina sobre el tratamiento de <strong>gratificaciones</strong>,
+        <strong>vacaciones</strong> (ordinarias, truncas y pago triple) y <strong>CTS</strong> según el régimen laboral.
+      </p>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Valor de la UIT 2026</div>
+          <div class="kpi-value">S/ 5,500</div>
+          <div class="kpi-sub">Base de referencia anual para el ejercicio 2026</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Deducción Legal (7 UIT)</div>
+          <div class="kpi-value">S/ 38,500</div>
+          <div class="kpi-sub">Umbral anual inafecto (S/ 5,500 × 7)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Gratificaciones y Vacaciones</div>
+          <div class="kpi-value">Sí Afectan</div>
+          <div class="kpi-sub">Ingresos gravados (sin duplicar el mes vacacional)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">CTS e Indemnización Vac.</div>
+          <div class="kpi-value">Inafectos</div>
+          <div class="kpi-sub">Se excluyen por completo de la proyección anual</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <div class="nav-inner">
+      <button class="tab-btn active" onclick="switchTab('simulador', this)">🧮 Simulador de Proyección 2026</button>
+      <button class="tab-btn" onclick="switchTab('regimenes', this)">📊 Límites por Régimen Laboral</button>
+      <button class="tab-btn" onclick="switchTab('conceptos', this)">📋 Matriz de Conceptos y Pago Triple</button>
+      <button class="tab-btn" onclick="switchTab('autoevaluacion', this)">✅ Autoevaluación de Nómina</button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- SECCIÓN 1: SIMULADOR -->
+    <section id="tab-simulador" class="section active">
+      <div class="section-header">
+        <h2>Simulador de Proyección Anual de Quinta Categoría (2026)</h2>
+        <p>Calcula si la remuneración proyectada supera el tramo inafecto de <strong>7 UIT (S/ 38,500)</strong> según el régimen laboral y el sistema de salud.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="form-group">
+            <label class="form-label" for="regimen">1. Régimen Laboral del Trabajador</label>
+            <select id="regimen" onchange="recalc()">
+              <option value="general">Régimen Laboral General (12 sueldos + 2 gratificaciones completas)</option>
+              <option value="pequena">Pequeña Empresa (12 sueldos + 2 medias gratificaciones = 1 sueldo)</option>
+              <option value="micro">Microempresa (12 sueldos, sin gratificaciones legales ni CTS)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="salud">2. Afiliación de Salud (Bonificación Extraordinaria)</label>
+            <select id="salud" onchange="recalc()">
+              <option value="essalud">EsSalud — Bonificación extraordinaria del 9%</option>
+              <option value="eps">EPS — Bonificación extraordinaria del 6.75%</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="sueldo">3. Remuneración Mensual Fija (S/)</label>
+            <div class="form-help">Incluye la remuneración vacacional dentro de los 12 sueldos anuales (las vacaciones no generan un sueldo #15).</div>
+            <input type="number" id="sueldo" value="2715.09" min="1000" max="25000" step="0.01" oninput="syncSlider(this.value)" />
+            <input type="range" id="sueldoRange" value="2715.09" min="1000" max="10000" step="1" oninput="syncInput(this.value)" />
+            <div class="preset-row">
+              <button class="preset-btn" onclick="setPreset('general', 'essalud', 2715.09)">Límite Gral. EsSalud (S/ 2,715.09)</button>
+              <button class="preset-btn" onclick="setPreset('general', 'eps', 2723.74)">Límite Gral. EPS (S/ 2,723.74)</button>
+              <button class="preset-btn" onclick="setPreset('pequena', 'essalud', 2941.18)">Límite Pequeña EsSalud (S/ 2,941.18)</button>
+              <button class="preset-btn" onclick="setPreset('pequena', 'eps', 2946.24)">Límite Pequeña EPS (S/ 2,946.24)</button>
+              <button class="preset-btn" onclick="setPreset('micro', 'essalud', 3208.33)">Límite Microempresa (S/ 3,208.33)</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="otrosGravados">4. Otros Ingresos Gravados en el Año (S/ Anuales)</label>
+            <div class="form-help">Asignación familiar, horas extras, comisiones, bonos, utilidades, vacaciones truncas o gratificaciones truncas al cese.</div>
+            <input type="number" id="otrosGravados" value="0" min="0" step="10" oninput="recalc()" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="conceptosInafectos">5. CTS + Indemnización Vacacional (S/ Anuales — Informativo)</label>
+            <div class="form-help">Prueba ingresar un monto de CTS (mayo, noviembre o trunca) o indemnización vacacional para verificar que NO altera la base imponible.</div>
+            <input type="number" id="conceptosInafectos" value="2715" min="0" step="50" oninput="recalc()" />
+          </div>
+        </div>
+
+        <div class="result-panel">
+          <div id="statusBanner" class="status-banner status-inafecto">
+            <span id="statusTitle">✅ NO SUPERA LAS 7 UIT — SIN RETENCIÓN</span>
+            <span id="statusFactor" class="badge badge-no">Factor: 14.18 sueldos</span>
+          </div>
+
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+            <strong>Límite mensual referencial (sin ingresos adicionales):</strong>
+            <span id="limiteRefText" style="color: var(--brand-primary); font-weight: 800;">S/ 2,715.09</span>
+          </p>
+
+          <ul class="breakdown-list">
+            <li class="breakdown-item">
+              <span>12 Remuneraciones mensuales ordinarias (incluye mes vacacional)</span>
+              <strong id="val12Sueldos">S/ 32,581.08</strong>
+            </li>
+            <li class="breakdown-item">
+              <span id="labelGrati">Gratificaciones legales proyectadas (2 sueldos)</span>
+              <strong id="valGrati">S/ 5,430.18</strong>
+            </li>
+            <li class="breakdown-item">
+              <span id="labelBonif">Bonificación extraordinaria (9% sobre gratificaciones)</span>
+              <strong id="valBonif">S/ 488.72</strong>
+            </li>
+            <li class="breakdown-item">
+              <span>Otros ingresos gravados (horas extras, bonos, truncas, etc.)</span>
+              <strong id="valOtros">S/ 0.00</strong>
+            </li>
+            <li class="breakdown-item excluded">
+              <span>CTS (mayo/noviembre/trunca) + Indemnización vacacional (Inafectos)</span>
+              <span id="valExcluidos">S/ 2,715.00 → S/ 0.00 gravado</span>
+            </li>
+            <li class="breakdown-item total">
+              <span>Total Renta Bruta Anual Proyectada</span>
+              <span id="valBruta">S/ 38,499.98</span>
+            </li>
+            <li class="breakdown-item">
+              <span>Deducción fija legal (7 UIT = 7 × S/ 5,500)</span>
+              <strong style="color: #dc2626;">− S/ 38,500.00</strong>
+            </li>
+            <li class="breakdown-item total" style="color: var(--brand-primary);">
+              <span>Renta Neta Anual Afecta a 5ta Categoría</span>
+              <span id="valNeta">S/ 0.00</span>
+            </li>
+          </ul>
+
+          <div class="callout" id="simExplanation">
+            Con una remuneración fija de <strong>S/ 2,715.09</strong> bajo el Régimen General con EsSalud, las 14.18 remuneraciones proyectadas suman <strong>S/ 38,500.00</strong>, manteniéndose dentro del umbral inafecto de 7 UIT.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: LÍMITES POR RÉGIMEN -->
+    <section id="tab-regimenes" class="section">
+      <div class="section-header">
+        <h2>Límites Mensuales Referenciales para 2026 por Régimen Laboral</h2>
+        <p>Comparativa exacta de cuántas remuneraciones gravadas se proyectan al año y el sueldo mensual máximo referencial para no superar las 7 UIT (S/ 38,500).</p>
+      </div>
+
+      <div class="card">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Régimen Laboral</th>
+                <th>Ingresos Gravados Considerados en el Ejercicio</th>
+                <th class="num">Equivalente Anual</th>
+                <th class="num">Fórmula (7 UIT ÷ Factor)</th>
+                <th class="num">Límite Mensual Referencial</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Régimen general con EsSalud</strong></td>
+                <td>
+                  12 sueldos + 2 gratificaciones + bonificación extraordinaria del 9%
+                  <div class="bar-track"><div class="bar-fill" style="width: 84.6%;"></div></div>
+                </td>
+                <td class="num">14.18 rem.</td>
+                <td class="num">S/ 38,500 ÷ 14.18</td>
+                <td class="num" style="color: var(--brand-primary); font-size: 1.02rem;">S/ 2,715.09</td>
+              </tr>
+              <tr>
+                <td><strong>Régimen general con EPS</strong></td>
+                <td>
+                  12 sueldos + 2 gratificaciones + bonificación extraordinaria del 6.75%
+                  <div class="bar-track"><div class="bar-fill" style="width: 84.9%;"></div></div>
+                </td>
+                <td class="num">14.135 rem.</td>
+                <td class="num">S/ 38,500 ÷ 14.135</td>
+                <td class="num" style="color: var(--brand-primary); font-size: 1.02rem;">S/ 2,723.74</td>
+              </tr>
+              <tr>
+                <td><strong>Pequeña empresa con EsSalud</strong></td>
+                <td>
+                  12 sueldos + 2 medias gratificaciones (1 sueldo) + bonificación extraordinaria del 9%
+                  <div class="bar-track"><div class="bar-fill" style="width: 91.7%;"></div></div>
+                </td>
+                <td class="num">13.09 rem.</td>
+                <td class="num">S/ 38,500 ÷ 13.09</td>
+                <td class="num" style="color: var(--brand-primary); font-size: 1.02rem;">S/ 2,941.18</td>
+              </tr>
+              <tr>
+                <td><strong>Pequeña empresa con EPS</strong></td>
+                <td>
+                  12 sueldos + 2 medias gratificaciones (1 sueldo) + bonificación extraordinaria del 6.75%
+                  <div class="bar-track"><div class="bar-fill" style="width: 91.8%;"></div></div>
+                </td>
+                <td class="num">13.0675 rem.</td>
+                <td class="num">S/ 38,500 ÷ 13.0675</td>
+                <td class="num" style="color: var(--brand-primary); font-size: 1.02rem;">S/ 2,946.24</td>
+              </tr>
+              <tr>
+                <td><strong>Microempresa</strong></td>
+                <td>
+                  12 sueldos (incluye 15 días de vacaciones remuneradas), sin gratificaciones legales ni CTS
+                  <div class="bar-track"><div class="bar-fill" style="width: 100%;"></div></div>
+                </td>
+                <td class="num">12.00 rem.</td>
+                <td class="num">S/ 38,500 ÷ 12</td>
+                <td class="num" style="color: var(--brand-primary); font-size: 1.02rem;">S/ 3,208.33</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-warn" style="margin-top: 1.25rem;">
+          <strong>Nota técnica de nómina:</strong> Los límites mensuales calculados son únicamente referenciales para trabajadores con remuneración fija. El importe real varía si el trabajador percibe asignación familiar, horas extras, comisiones, utilidades, bonos, vacaciones truncas o gratificaciones extraordinarias durante el ejercicio.
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 style="margin-bottom: 0.5rem; color: var(--brand-primary);">1. Régimen General</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            Recibe 12 remuneraciones, 2 gratificaciones completas, bonificación extraordinaria (9% o 6.75%), vacaciones remuneradas y CTS. Las vacaciones <strong>no generan una remuneración adicional número 15</strong> porque reemplazan el sueldo del mes descansado.
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="margin-bottom: 0.5rem; color: var(--brand-primary);">2. Pequeña Empresa</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            Percibe 12 remuneraciones, 2 medias gratificaciones (0.50 + 0.50 = 1 sueldo), vacaciones de 15 días y CTS (15 remuneraciones diarias por año). Ni la CTS ni los 15 días vacacionales se suman por encima de las 12 remuneraciones proyectadas.
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="margin-bottom: 0.5rem; color: var(--brand-primary);">3. Microempresa</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            Considera 12 remuneraciones mensuales y vacaciones de 15 días, sin gratificaciones legales ni CTS. Al no existir gratificaciones legales, las 7 UIT (S/ 38,500) se dividen directamente entre 12 meses.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: MATRIZ DE CONCEPTOS Y PAGO TRIPLE -->
+    <section id="tab-conceptos" class="section">
+      <div class="section-header">
+        <h2>Tratamiento Tributario de Beneficios Sociales en Nómina</h2>
+        <p>Filtra cada concepto para verificar si integra la renta bruta de quinta categoría o si se encuentra inafecto.</p>
+      </div>
+
+      <div class="card">
+        <div class="filter-bar">
+          <button class="filter-btn active" onclick="filterConcepts('all', this)">Todos los conceptos (9)</button>
+          <button class="filter-btn" onclick="filterConcepts('si', this)">Gravados — Sí afectan (6)</button>
+          <button class="filter-btn" onclick="filterConcepts('no', this)">Inafectos — No afectan (3)</button>
+          <button class="filter-btn" onclick="filterConcepts('cese', this)">Liquidación por Cese (3)</button>
+        </div>
+
+        <div class="table-wrap">
+          <table id="conceptsTable">
+            <thead>
+              <tr>
+                <th>Beneficio o Concepto</th>
+                <th>¿Afecta a 5ta Categoría?</th>
+                <th>Tratamiento en el Área de Nómina</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-afecta="si" data-cese="no">
+                <td><strong>Remuneración mensual</strong></td>
+                <td><span class="badge badge-si">Sí afecta</span></td>
+                <td>Se proyectan las remuneraciones ordinarias pendientes del año.</td>
+              </tr>
+              <tr data-afecta="si" data-cese="no">
+                <td><strong>Gratificación de julio y diciembre</strong></td>
+                <td><span class="badge badge-si">Sí afecta</span></td>
+                <td>Se incorporan en la proyección anual (2 sueldos en régimen general; 1 sueldo en pequeña empresa).</td>
+              </tr>
+              <tr data-afecta="si" data-cese="si">
+                <td><strong>Gratificación trunca</strong></td>
+                <td><span class="badge badge-si">Sí afecta</span></td>
+                <td>Se incorpora en el recálculo del impuesto al momento del cese laboral.</td>
+              </tr>
+              <tr data-afecta="si" data-cese="no">
+                <td><strong>Bonificación extraordinaria del 9% o 6.75%</strong></td>
+                <td><span class="badge badge-si">Sí afecta</span></td>
+                <td>Incrementa la renta bruta de quinta categoría (9% para EsSalud; 6.75% para EPS).</td>
+              </tr>
+              <tr data-afecta="si" data-cese="no">
+                <td><strong>Remuneración vacacional</strong></td>
+                <td><span class="badge badge-si">Sí afecta</span></td>
+                <td>Está gravada, pero normalmente ya está comprendida dentro de las 12 remuneraciones anuales (no se duplica).</td>
+              </tr>
+              <tr data-afecta="si" data-cese="si">
+                <td><strong>Vacaciones truncas</strong></td>
+                <td><span class="badge badge-si">Sí afecta</span></td>
+                <td>Se agregan a la liquidación de beneficios sociales y se recalcula la quinta categoría en el mes del cese.</td>
+              </tr>
+              <tr data-afecta="no" data-cese="no">
+                <td><strong>Indemnización por vacaciones no gozadas oportunamente</strong></td>
+                <td><span class="badge badge-no">No afecta (Inafecto)</span></td>
+                <td>Es una indemnización laboral inafecta por su naturaleza indemnizatoria.</td>
+              </tr>
+              <tr data-afecta="no" data-cese="no">
+                <td><strong>CTS depositada en mayo y noviembre</strong></td>
+                <td><span class="badge badge-no">No afecta (Inafecto)</span></td>
+                <td>No se proyecta ni se suma para quinta categoría (incluye los intereses generados por la CTS).</td>
+              </tr>
+              <tr data-afecta="no" data-cese="si">
+                <td><strong>CTS trunca pagada al cese</strong></td>
+                <td><span class="badge badge-no">No afecta (Inafecto)</span></td>
+                <td>Continúa siendo CTS inafecta al momento de la liquidación por cese.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="section-header" style="margin-top: 2rem;">
+        <h2>Desglose Especial: El denominado “Pago Triple Vacacional”</h2>
+        <p>Cuando el trabajador no disfruta de su descanso vacacional dentro del plazo legal, no todo el triple vacacional está inafecto. El área de nómina debe separarlo en sus tres componentes:</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card" style="border-top: 4px solid #f59e0b;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
+            <strong>1. Trabajo realizado</strong>
+            <span class="badge badge-si">Sí afecta</span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            La remuneración por el trabajo efectivamente realizado durante el periodo en que debió descansar constituye ingreso gravado de quinta categoría.
+          </p>
+        </div>
+
+        <div class="card" style="border-top: 4px solid #f59e0b;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
+            <strong>2. Descanso vacacional</strong>
+            <span class="badge badge-si">Sí afecta</span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            La remuneración correspondiente al descanso vacacional adquirido y no gozado también constituye renta gravada de quinta categoría.
+          </p>
+        </div>
+
+        <div class="card" style="border-top: 4px solid #16a34a;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
+            <strong>3. Indemnización vacacional</strong>
+            <span class="badge badge-no">No afecta (Inafecto)</span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            Solamente la indemnización por no haber disfrutado oportunamente las vacaciones está <strong>inafecta</strong> debido a su naturaleza indemnizatoria.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: AUTOEVALUACIÓN -->
+    <section id="tab-autoevaluacion" class="section">
+      <div class="section-header">
+        <h2>Autoevaluación Práctica para Nómina</h2>
+        <p>Pon a prueba los criterios técnicos de la fuente sobre la proyección del Impuesto a la Renta de Quinta Categoría en 2026.</p>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-q">1. En la proyección anual de un trabajador del régimen general que labora todo el año, ¿por qué las vacaciones no generan una “remuneración número 15”?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt" onclick="checkQuiz(this, false, 'q1')">Porque la remuneración vacacional está inafecta al Impuesto a la Renta de Quinta Categoría.</button>
+          <button class="quiz-opt" onclick="checkQuiz(this, true, 'q1')">Porque durante el mes de vacaciones la remuneración vacacional reemplaza a la remuneración mensual ordinaria ya incluida en los 12 sueldos.</button>
+          <button class="quiz-opt" onclick="checkQuiz(this, false, 'q1')">Porque las vacaciones solo se declaran cuando el trabajador cesa.</button>
+        </div>
+        <div id="q1" class="quiz-feedback">
+          <strong>Explicación:</strong> La remuneración vacacional sí está gravada, pero reemplaza el sueldo del mes en que el trabajador sale de descanso. Si ya proyectaste los 12 sueldos del año, volver a sumar un sueldo por vacaciones duplicaría el ingreso.
+        </div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-q">2. ¿Cuál es el sueldo mensual fijo máximo referencial en 2026 para que un trabajador del régimen general afiliado a EsSalud (bonificación del 9%) no supere las 7 UIT (S/ 38,500)?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt" onclick="checkQuiz(this, true, 'q2')">Hasta S/ 2,715.09 mensuales (dividiendo S/ 38,500 entre 14.18 remuneraciones).</button>
+          <button class="quiz-opt" onclick="checkQuiz(this, false, 'q2')">Hasta S/ 2,723.74 mensuales (dividiendo S/ 38,500 entre 14.135 remuneraciones).</button>
+          <button class="quiz-opt" onclick="checkQuiz(this, false, 'q2')">Hasta S/ 3,208.33 mensuales (dividiendo S/ 38,500 entre 12 remuneraciones).</button>
+        </div>
+        <div id="q2" class="quiz-feedback">
+          <strong>Explicación:</strong> Con EsSalud (9%), el trabajador acumula 12 sueldos + 2 gratificaciones + 0.18 de bonificación extraordinaria = 14.18 remuneraciones. Al dividir S/ 38,500 ÷ 14.18 se obtiene S/ 2,715.09.
+        </div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-q">3. Si un trabajador percibe el denominado “pago triple vacacional”, ¿qué parte se excluye del cálculo de quinta categoría?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt" onclick="checkQuiz(this, false, 'q3')">La totalidad de los tres sueldos del pago triple vacacional.</button>
+          <button class="quiz-opt" onclick="checkQuiz(this, false, 'q3')">La remuneración vacacional adquirida y la indemnización vacacional.</button>
+          <button class="quiz-opt" onclick="checkQuiz(this, true, 'q3')">Únicamente la indemnización por no haber disfrutado oportunamente las vacaciones (1 de las 3 partes).</button>
+        </div>
+        <div id="q3" class="quiz-feedback">
+          <strong>Explicación:</strong> Solo el componente propiamente indemnizatorio es inafecto. Tanto la remuneración por el trabajo realizado como la remuneración del descanso vacacional adquirido y no gozado están gravadas.
+        </div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-q">4. Cuando un trabajador cesa a mitad de año y recibe su liquidación de beneficios sociales (con vacaciones truncas, gratificación trunca y CTS trunca), ¿qué conceptos obligan a recalcular la quinta categoría?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt" onclick="checkQuiz(this, true, 'q4')">Las vacaciones truncas y la gratificación trunca; la CTS trunca permanece inafecta.</button>
+          <button class="quiz-opt" onclick="checkQuiz(this, false, 'q4')">Los tres conceptos (vacaciones truncas, gratificación trunca y CTS trunca).</button>
+          <button class="quiz-opt" onclick="checkQuiz(this, false, 'q4')">Ninguno, porque todo pago incluido en la liquidación de beneficios sociales es inafecto.</button>
+        </div>
+        <div id="q4" class="quiz-feedback">
+          <strong>Explicación:</strong> Tanto las vacaciones truncas como la gratificación trunca son rentas gravadas de quinta categoría y deben sumarse en el recálculo del mes de cese. La CTS (depositada en mayo/noviembre, trunca o sus intereses) está siempre inafecta.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>
+      Generado a partir de la fuente <a href="https://docs.google.com/document/d/1gObivCOqF3ca_6JG-4afhkpqrPQnHksYTa_vmf9WcxA" target="_blank" rel="noopener">Proyección para la retención del Impuesto a la Renta de Quinta Categoría en 2026</a> del cuaderno <a href="https://gemini.google.com/notebook/6e42d4e9-0671-44ca-ba32-0f7327183aee" target="_blank" rel="noopener">Elaboración de Planillas</a>.
+    </div>
+    <div>
+      UIT 2026: S/ 5,500 · Límite 7 UIT: S/ 38,500
+    </div>
+  </footer>
+
+  <script>
+    function switchTab(tabId, btn) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('tab-' + tabId).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    function fmt(num) {
+      return 'S/ ' + num.toLocaleString('es-PE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function syncSlider(val) {
+      const num = parseFloat(val) || 0;
+      const slider = document.getElementById('sueldoRange');
+      if (num <= 10000) slider.value = num;
+      recalc();
+    }
+
+    function syncInput(val) {
+      document.getElementById('sueldo').value = parseFloat(val).toFixed(2);
+      recalc();
+    }
+
+    function setPreset(regimen, salud, sueldo) {
+      document.getElementById('regimen').value = regimen;
+      document.getElementById('salud').value = salud;
+      document.getElementById('sueldo').value = sueldo.toFixed(2);
+      document.getElementById('sueldoRange').value = sueldo;
+      document.getElementById('otrosGravados').value = 0;
+      recalc();
+    }
+
+    function recalc() {
+      const regimen = document.getElementById('regimen').value;
+      const salud = document.getElementById('salud').value;
+      const sueldo = parseFloat(document.getElementById('sueldo').value) || 0;
+      const otros = parseFloat(document.getElementById('otrosGravados').value) || 0;
+      const inafectos = parseFloat(document.getElementById('conceptosInafectos').value) || 0;
+
+      const tasaBonif = (salud === 'essalud') ? 0.09 : 0.0675;
+      const labelSalud = (salud === 'essalud') ? '9% (EsSalud)' : '6.75% (EPS)';
+
+      let gratiSueldos = 0;
+      let labelGratiText = '';
+      if (regimen === 'general') {
+        gratiSueldos = 2;
+        labelGratiText = 'Gratificaciones legales proyectadas (2 sueldos)';
+      } else if (regimen === 'pequena') {
+        gratiSueldos = 1;
+        labelGratiText = 'Gratificaciones legales proyectadas (2 medias = 1 sueldo)';
+      } else {
+        gratiSueldos = 0;
+        labelGratiText = 'Gratificaciones legales (Microempresa: no aplica)';
+      }
+
+      const bonifSueldos = gratiSueldos * tasaBonif;
+      const factorTotal = 12 + gratiSueldos + bonifSueldos;
+      const limiteReferencial = 38500 / factorTotal;
+
+      const monto12 = sueldo * 12;
+      const montoGrati = sueldo * gratiSueldos;
+      const montoBonif = montoGrati * tasaBonif;
+      const rentaBruta = monto12 + montoGrati + montoBonif + otros;
+      const rentaNeta = Math.max(0, rentaBruta - 38500);
+
+      document.getElementById('limiteRefText').textContent = fmt(limiteReferencial) + ' mensuales';
+      document.getElementById('val12Sueldos').textContent = fmt(monto12);
+      document.getElementById('labelGrati').textContent = labelGratiText;
+      document.getElementById('valGrati').textContent = fmt(montoGrati);
+      document.getElementById('labelBonif').textContent = 'Bonificación extraordinaria ' + labelSalud;
+      document.getElementById('valBonif').textContent = fmt(montoBonif);
+      document.getElementById('valOtros').textContent = fmt(otros);
+      document.getElementById('valExcluidos').textContent = fmt(inafectos) + ' → S/ 0.00 gravado';
+      document.getElementById('valBruta').textContent = fmt(rentaBruta);
+      document.getElementById('valNeta').textContent = fmt(rentaNeta);
+
+      const banner = document.getElementById('statusBanner');
+      const title = document.getElementById('statusTitle');
+      const factorBadge = document.getElementById('statusFactor');
+      const expl = document.getElementById('simExplanation');
+
+      factorBadge.textContent = 'Factor: ' + Number(factorTotal.toFixed(4)) + ' rem.';
+
+      // Tolerance of S/ 0.05 for rounding at reference limits
+      if (rentaBruta <= 38500.05) {
+        banner.className = 'status-banner status-inafecto';
+        title.textContent = '✅ NO SUPERA LAS 7 UIT — SIN RETENCIÓN DE 5TA CATEGORÍA';
+        factorBadge.className = 'badge badge-no';
+        expl.innerHTML = 'Los ingresos gravados proyectados suman <strong>' + fmt(rentaBruta) + '</strong> y no superan las <strong>7 UIT (S/ 38,500.00)</strong>. No se genera retención del Impuesto a la Renta de Quinta Categoría.';
+      } else {
+        banner.className = 'status-banner status-afecto';
+        title.textContent = '⚠️ SUPERA LAS 7 UIT — AFECTO A RETENCIÓN DE 5TA CATEGORÍA';
+        factorBadge.className = 'badge badge-si';
+        expl.innerHTML = 'Los ingresos gravados proyectados suman <strong>' + fmt(rentaBruta) + '</strong>, superando el tramo inafecto de 7 UIT en <strong>' + fmt(rentaNeta) + '</strong>. Sobre dicha renta neta positiva se aplican las tasas progresivas acumulativas para determinar la retención mensual.';
+      }
+    }
+
+    function filterConcepts(filter, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const rows = document.querySelectorAll('#conceptsTable tbody tr');
+      rows.forEach(row => {
+        if (filter === 'all') {
+          row.style.display = '';
+        } else if (filter === 'cese') {
+          row.style.display = (row.getAttribute('data-cese') === 'si') ? '' : 'none';
+        } else {
+          row.style.display = (row.getAttribute('data-afecta') === filter) ? '' : 'none';
+        }
+      });
+    }
+
+    function checkQuiz(btn, isCorrect, feedbackId) {
+      const parent = btn.parentElement;
+      parent.querySelectorAll('.quiz-opt').forEach(b => {
+        b.classList.remove('correct', 'wrong');
+      });
+      btn.classList.add(isCorrect ? 'correct' : 'wrong');
+      document.getElementById(feedbackId).style.display = 'block';
+    }
+
+    // Initialize simulator
+    recalc();
+  </script>
+</body>
+</html>
